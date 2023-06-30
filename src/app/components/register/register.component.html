@@ -1,0 +1,74 @@
+<div class="register-container">
+    <form #userform="ngForm" [formGroup]="registerform" action="action_page.php" method="post"  (ngSubmit)="onSubmit(userform)"    style="border:1px solid #ccc">
+      <div class="form-control container">
+        <h1>Sign Up</h1>
+        <!-- <p>Please fill in this form to create an account.</p>
+        <hr> -->
+    
+        <hr> 
+        <label for="name"><b>Full Name</b></label>
+        <input class="form-control" formControlName="name"  [ngClass]="{'is-invalid': submitted && registerform.controls.name.errors}"  type="text" placeholder="Enter Name " name="name" required  [(ngModel)]="registerform.name">
+        <div *ngIf="submitted && registerform.controls.name.errors" class="text-danger">
+          <div *ngIf="submitted && registerform.controls.name.errors.required" class="text-danger">
+            User Name is required
+          </div>
+          Please  enter User Name
+  
+        </div>
+
+        <label for="email"><b>Email</b></label>
+        <input class="form-control" formControlName="email" [ngClass]="{'is-invalid': submitted && registerform.controls.email.errors}" type="text" placeholder="Enter Email" name="email" required  [(ngModel)]="registerform.email">
+        <div *ngIf="submitted && registerform.controls.email.errors" class="text-danger">
+          <div *ngIf="submitted && registerform.controls.email.errors.required" class="text-danger">
+            Email is required
+          </div>
+          Please enter Email ID
+  
+        </div>
+        <label for="psw"><b>Password</b></label>
+        <input  class="form-control" formControlName="password" [ngClass]="{'is-invalid': submitted && registerform.controls.password.errors}" type="password" placeholder="Enter Password" name="psw" required  [(ngModel)]="registerform.password">
+        <div *ngIf="submitted && registerform.controls.password.errors" class="text-danger">
+          <div *ngIf="submitted && registerform.controls.password.errors.required" class="text-danger">
+            Password is required
+          </div>
+          Please enter Password
+  
+        </div>
+
+        <label for="mobile"><b>Mobile Number</b></label>
+        <input class="form-control" formControlName="mobile"  [ngClass]="{'is-invalid': submitted && registerform.controls.mobile.errors}"  type="text" placeholder="Enter Mobile Number " name="mobile" required  [(ngModel)]="registerform.mobile">
+        <div *ngIf="submitted && registerform.controls.mobile.errors" class="text-danger">
+          <div *ngIf="submitted && registerform.controls.mobile.errors.required" class="text-danger">
+            Mobile is required
+          </div>
+          Please  enter Mobile Number
+  
+        </div>
+
+
+        <label for="role"><b>Role</b></label>
+        <input  class="form-control" formControlName="role" [ngClass]="{'is-invalid': submitted && registerform.controls.role.errors}" type="text" placeholder="Enter Role" name="role" required  [(ngModel)]="registerform.role">
+        <div *ngIf="submitted && registerform.controls.role.errors" class="text-danger">
+          <div *ngIf="submitted && registerform.controls.role.errors.required" class="text-danger">
+            Password is required Role
+          </div>
+          Please enter Role
+  
+        </div>
+
+
+
+        <label>
+          <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+        </label>
+    
+        <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+    
+        <div class="clearfix">
+          <button routerLink="/login" type="button" class="cancelbtn">Cancel</button>
+          <button type="submit" class="signupbtn"  >Sign Up</button>   <!--   (click)="onSubmit()-->
+        </div>
+      </div>
+    </form>
+  </div>
+  

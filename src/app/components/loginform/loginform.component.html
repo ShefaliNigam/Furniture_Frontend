@@ -1,0 +1,42 @@
+<div class="login-container">
+
+
+
+    <form [formGroup]="loginform" action="action_page.php" method="post" (ngSubmit)="onsubmit(user)" > <!-- (ngSubmit)="onsubmit()"-->
+      <div class="imgcontainer">
+        <!-- <img src=https://www.w3schools.com/howto/img_avatar2.png alt="Avatar" class="avatar"> -->
+      </div>
+    
+      <div class=" form-control container">
+        <label for="uname"><b>Username</b></label>
+        <input class="form-control" type="text" placeholder="Enter Username" formControlName="username" [ngClass]="{'is-invalid':submitted && loginform.controls.username.errors}" name="uname" required   [(ngModel)]="user.userEmail">
+          <div *ngIf="submitted && loginform.controls.username.errors" class="text-danger">
+            <div *ngIf="submitted && loginform.controls.username.errors.required" class="text-danger">
+              User Name is required
+            </div>
+            Please enter User Name
+  
+          </div>
+        <label for="psw"><b>Password</b></label>
+        <input  class="form-control" type="password" placeholder="Enter Password" id="myInput" formControlName="password" [ngClass]="{'is-invalid':submitted && loginform.controls.password.errors}" name="psw" required   [(ngModel)]="user.userPassword">
+        
+        <div *ngIf="submitted && loginform.controls.password.errors" class="text-danger">
+          <div *ngIf="submitted && loginform.controls.password.errors.required" class="text-danger">
+            Password is required
+          </div>
+          Please enter Password
+  
+        </div>
+        <button type="submit" (click)="doLogin(user)">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+    
+      <div class="container" style="background-color:#f1f1f1">
+        <button routerLink="/register" type="button" class="cancelbtn">SignUp</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+  </div>
+  

@@ -1,0 +1,22 @@
+
+<section class="container wrapper py-5">
+    <div class="container inner p-5 w-50 bg-secondary text-light">
+        <h2 class="fw-bold display-5 pb-3">LOGIN</h2>
+    <form >
+        <div class="mb-3">
+          <label for="user-email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="user-email" name="user-email" [(ngModel)]="user.userEmail" />
+        </div>
+        <div class="mb-4">
+          <label for="user-password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="user-password" name="password" [(ngModel)]="user.userPassword" />
+        </div>
+        <button type="submit" class="btn btn-dark" name = "form_submit" (click)="doLogin(user)" >Submit</button>
+        
+
+          <button type="submit" class="btn btn-danger" name = "form_submit" (click)="cancel()" >Cancel</button>
+
+      </form>
+    </div>
+    </section>
+    

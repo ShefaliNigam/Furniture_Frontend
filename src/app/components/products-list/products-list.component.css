@@ -1,0 +1,235 @@
+ 
+body{
+    display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      width:100%;
+      
+      
+    }
+    .productdsContainer {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-bottom: 10%;
+      margin: 6% auto;
+      gap: 4%;
+      justify-content: center;
+    }
+    
+    h4{
+      margin:0%
+    }
+    .productdsContainer .item {
+      width: 16%;
+      height: 100%;
+      border: 1px solid red;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      margin-top: 4%;
+      background: rgba(255, 255, 255, 0.086);
+      box-shadow: 0 1px 20px 0 rgba(31, 38, 135, 0.37);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      padding: 1%;
+      cursor: pointer;
+    }
+    .productdsContainer .item img {
+      width: 50%;
+      height: 150px;
+      object-fit: contain;
+      transition: transform 0.5s ease;
+    }
+    .productdsContainer .item img:hover {
+      transform: scale(1.1);
+    }
+    .productdsContainer .item .infoLine {
+      width: 100%;
+    }
+    .productdsContainer .item h4 {
+      word-wrap: break-word;
+      overflow: hidden;
+      height: 1.4em;
+      line-height: 1.8em;
+       
+    }
+    .productdsContainer .item p {
+      max-width: 100%;
+      word-wrap: break-word;
+      overflow: hidden;
+      max-height: 3.6em;
+      line-height: 1.8em;
+    }
+    
+    .productBoxContainer {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+      width: 90%;
+      margin: 4% auto;
+      gap: 2%;
+    }
+    
+    .productBox {
+      width: 15%;
+      height: 300px;
+      padding: 0.4%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2%;
+      background-color: rgba(243, 242, 243, 0.6392156863);
+      margin-top: 2%;
+      box-shadow: 0 8px 32px 0 hsla(0deg, 0%, 100%, 0.596);
+      cursor: pointer;
+    }
+    .productBox img {
+      width: 80%;
+      height: 30%;
+      object-fit: contain;
+      margin-top: 16%;
+    }
+    .productBox span {
+      font-size: small;
+      text-align: start;
+      width: 90%;
+      color: #bdbdbc;
+    }
+    .productBox h4 {
+      font-weight: 500;
+      text-align: start;
+      width: 90%;
+    }
+    .productBox p {
+      max-width: 90%;
+      word-break: break-all;
+      font-size: small;
+      text-align: start;
+    }
+    .productBox .priceLine {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 80%;
+      padding: 1%;
+    }
+    .productBox .priceLine button {
+      background-color: rgb(73, 120, 104);
+      height: 24px;
+      font-size: 10px;
+      width: 100%;
+      color: white;
+      padding: 2%;
+    }
+    .productBox .priceLine .favBtn {
+      background-color: rgb(255, 255, 255);
+      cursor: pointer;
+    }
+    
+    @media (min-width: 0px) and (max-width: 200px) {
+      .productBoxContainer {
+        margin-left: 22%;
+      }
+      .productBoxContainer .productBox {
+        width: 40%;
+        height: 100px;
+      }
+      .productBoxContainer .productBox img {
+        margin-top: 8%;
+      }
+      .productBoxContainer .productBox h4, .productBoxContainer .productBox p, .productBoxContainer .productBox span {
+        font-size: 4px;
+      }
+      .productBoxContainer .productBox .priceLine {
+        width: 90%;
+        padding: 1%;
+        height: 10px;
+      }
+      .productBoxContainer .productBox .priceLine button, .productBoxContainer .productBox .priceLine .favBtn {
+        font-size: 4px;
+        height: 8px;
+        line-height: 8px;
+      }
+    }
+    @media (min-width: 200px) and (max-width: 500px) {
+      .productBoxContainer {
+        margin-left: 14%;
+      }
+      .productBoxContainer .productBox {
+        width: 40%;
+        height: 200px;
+      }
+      .productBoxContainer .productBox img {
+        margin-top: 8%;
+      }
+      .productBoxContainer .productBox h4, .productBoxContainer .productBox p, .productBoxContainer .productBox span {
+        font-size: 10px;
+      }
+      .productBoxContainer .productBox .priceLine {
+        width: 90%;
+        padding: 1%;
+      }
+      .productBoxContainer .productBox .priceLine button {
+        font-size: 6px;
+      }
+    }
+    @media (min-width: 500px) and (max-width: 800px) {
+      .productBoxContainer {
+        margin-left: 8%;
+      }
+      .productBoxContainer .productBox {
+        width: 30%;
+        height: 240px;
+      }
+      .productBoxContainer .productBox img {
+        width: 70%;
+      }
+      .productBoxContainer .productBox h4, .productBoxContainer .productBox p, .productBoxContainer .productBox span {
+        font-size: 12px;
+      }
+      .productBoxContainer .productBox h4 {
+        font-size: 14px;
+      }
+      .productBoxContainer .productBox .priceLine {
+        width: 90%;
+        padding: 1%;
+      }
+      .productBoxContainer .productBox .priceLine button {
+        font-size: 8px;  
+      }
+    }
+    button {
+     border:0
+      
+      }
+    @media (min-width: 800px) and (max-width: 1280px) {
+      .productBoxContainer {
+        margin-left: 8%;
+      }
+      .productBoxContainer .productBox {
+        width: 22%;
+        height: 280px;
+      }
+      .productBoxContainer .productBox img {
+        width: 78%;
+      }
+      .productBoxContainer .productBox h4, .productBoxContainer .productBox p, .productBoxContainer .productBox span {
+        font-size: 12px;
+      }
+      .productBoxContainer .productBox h4 {
+        font-size: 14px;
+      }
+      .productBoxContainer .productBox .priceLine {
+        width: 90%;
+        padding: 1%;
+      }
+      .productBoxContainer .productBox .priceLine button {
+        font-size: 10px;
+      }
+    }
